@@ -36,8 +36,8 @@
 					$sql_usuario = $c->query("SELECT *  FROM empresa where codigo = '".$p->getempresa()."'");
 					$result_register = mysqli_fetch_array($sql_usuario);
 					if ($result_register) {
-						$sql = ("INSERT INTO `registro` VALUES('".$p->getnombre()."','".$p->getempresa()."','".$p->gettelefono()."','".$p->getcorreo()."','".$p->getcontrasena()."')");
-						echo($resultado);
+						$sql = ("INSERT INTO `registro` VALUES('','".$p->getnombre()."','".$p->getempresa()."','".$p->gettelefono()."','".$p->getcorreo()."','".$p->getcontrasena()."')");
+						
 						$resultado = $c->query($sql);
 						return 2;
 					}else return 3;

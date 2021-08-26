@@ -2,7 +2,7 @@
 if(isset($_GET['menu'])){
 	if($_GET['menu']=='ingreso'){
 		$nombre=$_POST['nombre'];
-		$empresa=$_POST['empresa'];
+		$empresa=$_POST['codEmpresa'];
 		$telefono=$_POST['telefono'];
 		$correo=$_POST['correo'];
 		$contrasena=$_POST['contra'];
@@ -81,7 +81,7 @@ function myFunction() {
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-building"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="Codigo de empresa" name="empresa" required="true">
+						<input type="text" class="form-control" placeholder="Codigo de empresa" name="codEmpresa" required="true">
 					</div>
 
 					<div class="input-group form-group">
