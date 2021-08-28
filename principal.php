@@ -149,6 +149,9 @@ if(isset($_GET['menu10'])){
             <a class="nav-link js-scroll-trigger" href="#contact">Contáctanos</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="resetPassword.php">contraseña</a>
+          </li>
+          <li class="nav-item">
          <a class="nav-link js-scroll-trigger" href="logout.php">Cerrar Sesión</a>
         </li>
         </ul>
@@ -534,30 +537,7 @@ if(isset($_GET['menu10'])){
             </ul>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/3.jpeg" alt="">
-            <h4>Carolina Londoño</h4>
-            <p class="text-muted">Scrum Master</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="https://twitter.com/Caro2504L">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.facebook.com/Caro.2504">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.instagram.com/clondono25/?hl=es-la">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        
       </div>
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">

@@ -82,7 +82,7 @@ if(isset($_GET['menu'])){
 					¿No tienes una cuenta?<a href="registro.php">Regístrate</a>
 				</div>
 				<div class="d-flex justify-content-center links">
-					<a href="resetPassword.php">¿Olvidaste tu contraseña?</a>
+					<!-- <a href="resetPassword.php">¿Olvidaste tu contraseña?</a> -->
 				</div>
 			</div>
 			<?php 

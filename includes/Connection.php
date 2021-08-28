@@ -176,8 +176,8 @@
 				 $sql = "UPDATE registro SET contrasena='".$a->getnuevaContrasena()."' WHERE correo = '".$a->getcorreo()."'";
 				$c->query($sql);
 				return 	$sw=1;
-				}elseif($result_register[1]!=$a->getnombre()){
-				 		return $sw=3;
+				// }elseif($result_register[1]!=$a->getnombre()){
+				//  		return $sw=3;
 			}else{ return $sw=2;
 			}	
 			exit();

@@ -87,9 +87,8 @@ class registro
 		$resp = $this->c->mostrar($cedula);
 		return $resp;
 	}
-	function Actualizar($nombre,$correo,$nuevaContrasena)
+	function Actualizar($correo,$nuevaContrasena)
 	{
-		$this->nombre = $nombre;
 		$this->correo = $correo;
 		$this->nuevaContrasena = $nuevaContrasena;
 		$resp= $this->c->nuevaContrasena($this);

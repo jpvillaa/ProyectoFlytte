@@ -1,11 +1,15 @@
-<?php include ('includes/clases.php');
+<?php
+session_start();
+if (isset($_SESSION['CORREO'])) {
+include ('includes/clases.php');
+$c = new Connection();
 if(isset($_GET['menu'])){
 	if($_GET['menu']=='ingreso'){
-		$nombre=$_POST['nombre'];
+		//$nombre=$_POST['nombre'];
 		$correo=$_POST['correo'];
 		$nuevaContrasena=$_POST['contra'];
 		$registro=new registro();
-		$sw=$registro->Actualizar($nombre,$correo,$nuevaContrasena);
+		$sw=$registro->Actualizar($correo,$nuevaContrasena);
 		if ($sw==1) {
 			header('location:Login.php');
 		}
@@ -78,17 +82,17 @@ function myFunction() {
 			</div>
 			<div class="card-body">
 				<form action='?menu=ingreso' method="post">
-					<div class="input-group form-group">
+					<!-- <div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
 							<input type="text" class="form-control" placeholder="Nombre" name="nombre" required="true">
-					</div>
+					</div> -->
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
 						</div>
-						<input type="email" class="form-control" placeholder="Correo" name="correo" required="true">
+						<input type="email" readonly class="form-control" placeholder="Correo" name="correo" required="true" value=<?php echo $_SESSION['CORREO'] ?>>
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
@@ -114,3 +118,9 @@ function myFunction() {
 </div>
 </body>
 </html>
+
+<?php
+}else{
+  header('location:Login.php');
+}
+?>
